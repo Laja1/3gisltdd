@@ -46,19 +46,19 @@ const Footer = () => {
                   <p>Quick Links</p>
                 </div>
                 <ul>
-                  <p className="text-white text-sm open-sans">
+                   <p className="text-white text-sm open-sans">
                     <Link href="/">Home</Link>
+                  </p>
+                  
+                   <p className="text-white text-sm open-sans">
+                    <Link href="/service">Services</Link>
+                  </p>
+                   <p className="text-white text-sm open-sans">
+                    <Link href="/Partners">Partners</Link>
                   </p>
                   <p className="text-white text-sm open-sans">
                     <Link href="/about-us">About Us</Link>
                   </p>
-                  <p className="text-white text-sm open-sans">
-                    <Link href="/service">Services</Link>
-                  </p>
-                  <p className="text-white text-sm open-sans">
-                    <Link href="">Strategic finance</Link>
-                  </p>
-                
                 </ul>
               </div>
             </div>

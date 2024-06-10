@@ -23,7 +23,7 @@ export default function HomeThreePage() {
       {/* <StateSection /> */}
       <Projects />
 
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
       {/* <FAQSection /> */}
       <FooterSectionThree />
     </>

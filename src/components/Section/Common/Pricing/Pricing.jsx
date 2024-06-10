@@ -38,12 +38,12 @@ const serviceData = [
    
 export default function Projects() { 
   return ( 
-    <div className="text-center  flex flex-col items-center justify-center py-10"> 
+    <div className="text-center  flex flex-col items-center justify-center pb-10"> 
            <div className="py-3 items-center justify-center flex flex-col"> 
        <h1 className="playfair-display py-2 text-xl text-black md:text-2xl lg:text-3xl font-bold">Our Projects</h1> 
           <div className="w-14  h-1  rounded-full bg-[#BCDBFF]"/> 
           </div>  
-           <div className="pt-10 items-center justify-center  grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5"> 
+           <div className="pt-5 items-center justify-center  grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5"> 
       {serviceData.map((item, index) =>( 
         <motion.div 
           key={index} 

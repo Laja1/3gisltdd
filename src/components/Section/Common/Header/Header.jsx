@@ -1,99 +1,285 @@
-"use client"
-import Link from "next/link";
+'use client'
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <div>
-      <div className="drop-shadow">
-        <nav className="bg-black  border-gray-200 text-white">
-          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav style={{ backgroundColor: '#000' }}>
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '4rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
             <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
               <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap text-white dark:text-white">3GIS</span>
+              <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">3GIS</span>
             </a>
-            <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-              <Link href="/contact-us">
-                <button
-                  type="button"
-                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                   Contact Us
-                </button>
-              </Link>
-              <button
-                onClick={toggleMenu}
-                data-collapse-toggle="navbar-cta"
-                type="button"
-                className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 bg-black dark:focus:ring-gray-600"
-                aria-controls="navbar-cta"
-                aria-expanded={isMenuOpen ? "true" : "false"}
-              >
-                <span className="sr-only">Open main menu</span>
-                <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
-                </svg>
-              </button>
-            </div>
-            <div
-            
-              className={`items-center justify-between ${isMenuOpen ? "block border-gray-200  rounded-lg border" : "hidden border-0 border-black"}  w-full md:flex md:w-auto md:order-1`}
-              id="navbar-cta"
-            >
-              <ul className="flex flex-col font-medium p-4 md:p-0  text-white  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-black dark:bg-black md:dark:bg-black ">
+            <div style={{ display: 'none', marginLeft: '2.5rem', '@media (min-width: 768px)': { display: 'block' } }}>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: '1rem' }}>
                 <Link
                   href="/"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "block py-2 px-3 md:p-0 text-white rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500"
-                      : "block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white "
-                  }
+                  style={{
+                    color: '#fff',
+                    padding: '0.5rem 0.75rem',
+                    borderRadius: '0.25rem',
+                    fontSize: '0.875rem',
+                    fontWeight: '500',
+                    ':hover': {
+                      backgroundColor: '#4a5568',
+                      color: '#ffffff'
+                    }
+                  }}
                 >
                   Home
                 </Link>
-                 <Link
+                <Link
                   href="/service"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "block py-2 px-3 md:p-0 text-white rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500"
-                      : "block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white "
-                  }
+                  style={{
+                    color: '#fff',
+                    padding: '0.5rem 0.75rem',
+                    borderRadius: '0.25rem',
+                    fontSize: '0.875rem',
+                    fontWeight: '500',
+                    ':hover': {
+                      backgroundColor: '#4a5568',
+                      color: '#ffffff'
+                    }
+                  }}
                 >
-                 Services
+                  Services
                 </Link>
-                  <Link
+                <Link
                   href="/Partners"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "block py-2 px-3 md:p-0 text-white rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500"
-                      : "block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white "
-                  }
+                  style={{
+                    color: '#fff',
+                    padding: '0.5rem 0.75rem',
+                    borderRadius: '0.25rem',
+                    fontSize: '0.875rem',
+                    fontWeight: '500',
+                    ':hover': {
+                      backgroundColor: '#4a5568',
+                      color: '#ffffff'
+                    }
+                  }}
                 >
-                 Partners
+                  Partners
                 </Link>
                 <Link
                   href="/about-us"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "block py-2 px-3 md:p-0 text-white rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500"
-                      : "block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white "
-                  }
+                  style={{
+                    color: '#fff',
+                    padding: '0.5rem 0.75rem',
+                    borderRadius: '0.25rem',
+                    fontSize: '0.875rem',
+                    fontWeight: '500',
+                    ':hover': {
+                      backgroundColor: '#4a5568',
+                      color: '#ffffff'
+                    }
+                  }}
                 >
-                  About
+                  About Us
                 </Link>
-               
-                
-              </ul>
+              </div>
             </div>
           </div>
-        </nav>
+          <div style={{ display: 'none', marginLeft: '1rem', '@media (min-width: 768px)': { display: 'block' } }}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <Link href="/contact-us">
+                <button className="bg-blue-600" style={{
+          
+                  color: '#ffffff',
+                  padding: '0.5rem 0.75rem',
+                  borderRadius: '0.25rem',
+                  fontSize: '0.875rem',
+                  fontWeight: '500',
+                  ':hover': {
+                    backgroundColor: '#4f46e5'
+                  }
+                }}>
+                  Contact Us
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div style={{ marginRight: '-0.5rem', display: 'flex', '@media (min-width: 768px)': { display: 'none' } }}>
+            <button
+              onClick={toggleMenu}
+              type="button"
+              className="bg-blue-600"
+              style={{
+              
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '0.5rem',
+                borderRadius: '0.375rem',
+                color: '#fff',
+                ':hover': {
+                  color: '#ffffff',
+                  backgroundColor: '#4a5568'
+                },
+                ':focus': {
+                  outline: 'none',
+                  ring: '2px solid #6366f1',
+                  ringOffset: '2px'
+                }
+              }}
+              aria-controls="mobile-menu"
+              aria-expanded={isMenuOpen}
+            >
+              <span style={{ display: 'none' }}>Open main menu</span>
+              {!isMenuOpen ? (
+                <svg
+                  style={{ display: 'block', height: '1.5rem', width: '1.5rem' }}
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  style={{ display: 'block', height: '1.5rem', width: '1.5rem' }}
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              )}
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
+
+      <div style={{ display: isMenuOpen ? 'block' : 'none', '@media (min-width: 768px)': { display: 'none' } }}>
+        <div style={{ padding: '0.5rem 0.75rem' }}>
+          <Link
+            href="/"
+            style={{
+              display: 'block',
+              color: '#fff',
+              padding: '0.5rem 0.75rem',
+              borderRadius: '0.25rem',
+              fontSize: '1rem',
+              fontWeight: '500',
+              ':hover': {
+                backgroundColor: '#4a5568',
+                color: '#ffffff'
+              }
+            }}
+          >
+            Home
+          </Link>
+          <Link
+            href="/service"
+            style={{
+              display: 'block',
+              color: '#fff',
+              padding: '0.5rem 0.75rem',
+              borderRadius: '0.25rem',
+              fontSize: '1rem',
+              fontWeight: '500',
+              ':hover': {
+                backgroundColor: '#4a5568',
+                color: '#ffffff'
+              }
+            }}
+          >
+            Services
+          </Link>
+          <Link
+            href="/Partners"
+            style={{
+              display: 'block',
+              color: '#fff',
+              padding: '0.5rem 0.75rem',
+              borderRadius: '0.25rem',
+              fontSize: '1rem',
+              fontWeight: '500',
+              ':hover': {
+                backgroundColor: '#4a5568',
+                color: '#ffffff'
+              }
+            }}
+          >
+            Partners
+          </Link>
+          <Link
+            href="/Projects"
+            style={{
+              display: 'block',
+              color: '#fff',
+              padding: '0.5rem 0.75rem',
+              borderRadius: '0.25rem',
+              fontSize: '1rem',
+              fontWeight: '500',
+              ':hover': {
+                backgroundColor: '#4a5568',
+                color: '#ffffff'
+              }
+            }}
+          >
+           Projects
+          </Link>
+          <Link
+            href="/about-us"
+            style={{
+              display: 'block',
+              color: '#fff',
+              padding: '0.5rem 0.75rem',
+              borderRadius: '0.25rem',
+              fontSize: '1rem',
+              fontWeight: '500',
+              ':hover': {
+                backgroundColor: '#4a5568',
+                color: '#ffffff'
+              }
+            }}
+          >
+            About Us
+          </Link>
+          <Link href="/contact-us">
+            <button
+              className="bg-blue-600"
+              style={{
+               
+                width: '100%',
+                color: '#ffffff',
+                padding: '0.5rem 0.75rem',
+                borderRadius: '0.25rem',
+                fontSize: '1rem',
+                fontWeight: '500',
+                ':hover': {
+                  backgroundColor: '#4f46e5'
+                }
+              }}
+            >
+              Contact Us
+            </button>
+          </Link>
+        </div>
+      </div>
+    </nav>
   );
 }
+  

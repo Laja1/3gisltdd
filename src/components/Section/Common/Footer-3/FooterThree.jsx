@@ -49,16 +49,16 @@ const Footer = () => {
                    <p className="text-black text-sm open-sans">
                     <Link href="/">Home</Link>
                   </p>
-                   <p className="text-black text-sm open-sans">
-                    <Link href="/about-us">About Us</Link>
-                  </p>
+                  
                    <p className="text-black text-sm open-sans">
                     <Link href="/service">Services</Link>
                   </p>
                    <p className="text-black text-sm open-sans">
                     <Link href="/Partners">Partners</Link>
                   </p>
-                
+                  <p className="text-black text-sm open-sans">
+                    <Link href="/about-us">About Us</Link>
+                  </p>
                 </ul>
               </div>
             </div>
