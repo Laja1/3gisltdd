@@ -3115,7 +3115,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
 
 .zubuz-breadcrumb {
   text-align: center;
-  padding: 195px 0 130px;
+  padding: 95px 0 90px;
   background-color: var(--dark-bg);
 }
 @media (max-width: 991px) {

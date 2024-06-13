@@ -5,12 +5,13 @@ import PricingSection from "~/components/Section/Common/Pricing/Pricing";
 import Header from "~/components/Section/Common/Header/Header";
 import ServicesData from "./ServicesAvailable";
 
+
 export default function ServicePage() {
   return (
     <>
       <Header />
       <PageHeader title="Our Services" />
-
+    
       <ServicesData />
       {/* <ServiceSection /> */}
       <Footer />

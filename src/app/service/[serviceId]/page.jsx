@@ -10,7 +10,7 @@ const serviceData = [
     description2: "In achieving this, we align ourselves as a company to applying project management tenets that bring about eventual gain for all stakeholders within a project. 3GIS consists of PRINCE2 and PMI project management certified consultants that bring to bare all the requisite skills and knowledge areas necessary to achieve project success.",
     description3: "3GIS projects are managed to time, within budget and meeting stakeholder objectives by employing PRINCE2 and PMI project management methodologies. Projects are divided into stages, with each stage reflecting the project management process groups, (initiation, planning, execution, control and close-out) for easy management. Divided into manageable stages, the method enables an efficient control of resources and activities.",
     description4: "Tools used for project management include web, email and Enterprise Microsoft Project for offline and online reporting, Microsoft Visio and Word for diagramming and overall project documentations. Bespoke web applications can also be developed to improve access to documents by team and stakeholders in geographically dispersed locations working on same projects.",
-    imageUrl: "/images/service/project_mg.jpg",
+    imageUrl: "/images/service/project_mg.png",
     alt: "Project Manager",
   },
   {
@@ -101,15 +101,14 @@ const serviceData = [
           <meta name="Services" content="Our Services" />
           <link rel="canonical" href="/Services" />
         </Head>
-        <div className="w-2xl md:w-6xl lg:w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <div className="shadow-xl items-center flex flex-col rounded-lg overflow-hidden">
-            <div className="relative w-full ">
-              <img
-                src={data.imageUrl}
-                className="w-full h-full rounded-lg  object-cover"
-                alt={data.alt} 
-              />
-            </div>
+        <div className="bg-gray-100 py-12">
+     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+       <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div className="relative">
+           <img src={data.imageUrl} className="w-full h-64 object-cover" alt="Service" />
+           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-75"></div>
+              <h2 className="absolute inset-x-0 bottom-4 text-center text-white text-2xl font-bold">{data.title}</h2>
+         </div>
             <div className="p-6 md:p-8 lg:p-10">
       
               <div className="mt-6 space-y-4">
@@ -140,7 +139,7 @@ const serviceData = [
               )}
             </div>
           </div>
-        </div>
+        </div></div>
       </main>
       {/* <Footer /> */}
     </div>
@@ -154,3 +153,4 @@ export async function generateStaticParams() {
     serviceId: service.id,
   }));
 }
+

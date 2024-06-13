@@ -6,26 +6,29 @@ import StateSection from "~/components/Section/Home-3/State/State";
 import ServiceSection from "~/components/Section/Home-3/Service/Service";
 import FAQSection from "~/components/Section/Common/FAQ/FAQSection";
 import HomeHeader from "~/components/Section/Common/Header/HomeHeader";
-import FooterSectionThree from "../components/Section/Common/Footer-3/FooterThree";
+import Footer from "../components/Section/Common/Footer/Footer";
 import ContentSectionThree from "~/components/Section/Home-3/Content-3/ContentTwo";
 import Projects from "~/components/Section/Common/Pricing";
+import "scrolling-features-react/dist/style.css";
+import Service from "~/components/Section/Home-3/Ourservice/page";
 
 export default function HomeThreePage() {
   return (
     <>
       <HomeHeader roundedBtn="true" />
       <HeroSection />
-      <ServiceSection />
-      <ContentSection />
+ <Service />    
+      {/* <ContentSection />
       <ContentSectionTwo />
-      <ContentSectionThree />
+      <ContentSectionThree /> */}
 
       {/* <StateSection /> */}
-      <Projects />
+      {/* <Projects /> */}
 
       {/* <TestimonialSection /> */}
       {/* <FAQSection /> */}
-      <FooterSectionThree />
+      <ServiceSection />
+      <Footer />
     </>
   );
 }

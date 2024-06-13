@@ -91,7 +91,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="zubuz-copywright">
-            <p> &copy;Copyright 2024, All Rights Reserved by Mthemeus</p>
+            <p> &copy;Copyright 2024, All Rights Reserved by 3GIS</p>
           </div>
         </div>
       </div>

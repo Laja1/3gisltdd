@@ -2,7 +2,7 @@ import Marquee from "react-fast-marquee";
 
 const ServiceSection = () => {
   return (
-    <div className="zubuz-brand-logo-section p-5">
+    <div className="zubuz-brand-logo-section px-2 pb-4">
       
       <div className="">
         <div className="zubuz-brand-logo-wrap">

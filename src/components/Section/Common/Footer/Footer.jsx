@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="col-xl-4 col-lg-12">
               <div className="zubuz-footer-textarea">
                 <Link href="">
-                  <img src="/images/logo/logo.png" alt="" />
+                  <img src="/images/logo/logo.png" alt="" className="w-[150px]"/>
                 </Link>
                 <p className='text-sm'>
                   We're your innovation partner, delivering cutting-edge
@@ -91,7 +91,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="zubuz-copywright">
-            <p> &copy;Copyright 2024, All Rights Reserved by Mthemeus</p>
+            <p> &copy;Copyright 2024, All Rights Reserved by 3GIS</p>
           </div>
         </div>
       </div>

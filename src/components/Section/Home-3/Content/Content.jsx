@@ -14,7 +14,7 @@ const ContentSection = () => {
           />
         </div>
         <div className="w-full lg:w-1/2 flex justify-center  text-center px-5">
-          <div className="max-w-lg">
+          <div className="max-w-xl">
             <h2 className="text-3xl lg:text-6xl font-bold">Project Management</h2>
             <p className="text-sm text-center lg:text-base pt-2">
               Ensuring that projects deliver on their benefits and objectives is the reason for the systematic project management approach adopted by 3GIS to project delivery. In achieving this, we align ourselves as a company to applying proven project management tenets.

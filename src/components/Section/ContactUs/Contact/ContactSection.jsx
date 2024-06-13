@@ -9,15 +9,19 @@ const ContactSection = () => {
           <div className="col-lg-6">
             <div className="zubuz-default-content m-right">
               <h2>Contact our support team</h2>
-             <p className="text-base leading-loose  open-sans">
-                Book an appointment with our team now! 
+              <p className="text-base leading-loose  open-sans">
+                Book an appointment with our team now!
               </p>
               <div className="zubuz-extara-mt">
                 <div className="zubuz-iconbox-wrap-left d-block">
                   <div className="zubuz-iconbox-data ">
                     <span>Office Location:</span>
-                   <p className="text-sm leading-loose  open-sans">US Office: 10, Hillcrest Avenue, West Orange, NJ. 07052.</p>
-                    <p className="text-sm leading-loose  open-sans">Nigeria Office: 40b, Commercial Avenue, Yaba, Lagos.</p>
+                    <p className="text-sm leading-loose  open-sans">
+                      US Office: 10, Hillcrest Avenue, West Orange, NJ. 07052.
+                    </p>
+                    <p className="text-sm leading-loose  open-sans">
+                      Nigeria Office: 40b, Commercial Avenue, Yaba, Lagos.
+                    </p>
                   </div>
                 </div>
                 <div className="zubuz-iconbox-wrap-left d-block">
@@ -38,11 +42,6 @@ const ContactSection = () => {
                         <li>
                           <Link href="https://www.linkedin.com/">
                             <FaLinkedin />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="https://github.com/">
-                            <FaGithub />
                           </Link>
                         </li>
                       </ul>

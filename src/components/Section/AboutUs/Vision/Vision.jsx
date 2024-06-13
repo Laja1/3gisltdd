@@ -13,8 +13,8 @@ export default function Vision() {
             <div className="w-10 h-1 rotate-90 bg-[#222] rounded-full" />
             <p className="font-bold playfair-display text-2xl text-center ml-3">Our Profile</p>
           </div>
-          <div className="pt-10 px-10 space-y-1">
-            <p className="text-sm leading-loose  open-sans">
+          <div className="pt-10 px-10 w-[350px] md:w-[540px] lg:w-[680px] space-y-1">
+            <p className="text-sm leading-loose   open-sans">
               3G Integrated Systems is an information technology firm dedicated exclusively to delivering end-to-end computing, telecommunication and project management solutions. We deliver complete solutions to the government, health, banking, manufacturing and distribution industries.
             </p>
             <p className="text-sm leading-loose  open-sans">
@@ -35,7 +35,7 @@ export default function Vision() {
             <p className="font-bold playfair-display text-2xl text-center mr-3">Our Mission</p>
             <div className="w-10 h-1 rotate-90 bg-[#222] rounded-full" />
           </div>
-          <div className="pt-10 px-10 space-y-1">
+          <div className="pt-10 w-[350px] md:w-[540px] lg:w-[680px] px-10 space-y-1">
             <p className="text-sm leading-loose open-sans">
               3G Integrated Systems&apos; mission is to provide customer satisfaction, as this is the key to success. We will continue supplying quality services and products to meet our customers&apos; needs. We will maintain highly skilled and professional workforce in partnership with you, our customer, towards meeting your business objectives.
             </p>

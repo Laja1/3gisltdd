@@ -1,4 +1,5 @@
 [
+  
   {
     "name": "SecuGen Corporation",
    
@@ -14,16 +15,29 @@
     "icon": "/images/icon/acs_logo.jpg"
   },
   {
-    "name": "Nitigen Biometric Solution",
+    "name": "Nitgen Biometric Solution",
   
     "description": "Through relentless efforts in R&D, and responding dynamically to demands from the biometric security market, NITGEN is rapidly becoming the leader in biometric application/technology markets. NITGEN has developed and now offers, advanced biometric authentication solutions, which would not have been possible without the core technologies for fingerprint recognition solutions that NITGEN has. 3GIS is in partnership with NITGEN as a Value Added Reseller of its security products.",
     "link": "",
     "icon": "/images/icon/nitgen_logo.jpg"
   },
   {
-    "name": "dlink_logo",
+    "name": "D-Link",
     "description": "Founded in 1986, D-Link is a global leader in the design, manufacture and marketing of advanced IP networking, broadband, digital, voice and data communications solutions. D-Link continually meets the global networking and connectivity needs of digital home consumers, small office professionals, small- to medium-sized businesses, and enterprise environments. 3GIS believe IP is the future and therefore is in partnership with D-Link as a Value Added Reseller of its Networking products to provide IP connectivity solutions to small and medium-sized companies. These include IP CCTV Surveillance and Wireless solutions.",
     "link": "",
     "icon": "/images/icon/dlink_logo.jpg"
+  },{
+    "name": "Smartsheet Corporation",
+   
+    "description": "Smartsheet is a software as a service offering for collaboration and work management, used to assign tasks, track project progress, manage calendars, share documents, and manage other work, using a tabular user interface. The is platform is used by 3GIS to automate business processes and provides real-time and online visibility to the management of the organization.",
+    "link": "",
+    "icon": "/images/icon/smartsheet.svg"
+  },
+  {
+    "name": "Cynergy Wattmon",
+   
+    "description": "SecuGen Corporation is the world's leading provider of advanced, optical fingerprint recognition technology, products, tools and platforms. Known for their extreme durability, accuracy, and support for a wide range of platforms, SecuGen's fingerprint biometric products include FBI-certified fingerprint sensors. 3GIS is in partnership with SecuGen as an Independent Software Vendor providing identity management based applications.",
+    "link": "",
+    "icon": "/images/icon/cynergy.png"
   }
 ]
