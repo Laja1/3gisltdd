@@ -5,54 +5,28 @@ import { FaAngleDown, FaAngleLeft } from "react-icons/fa";
 import BrandLogo from "~/components/Ui/Logo/BrandLogo";
 
 const Header = ({ logoSrc }) => {
+  const [currentPath, setCurrentPath] = useState("");
   const [isActive, setIsActive] = useState(false);
   const [subMenuArray, setSubMenuArray] = useState([]);
   const [subMenuTextArray, setSubMenuTextArray] = useState([]);
 
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setCurrentPath(window.location.pathname);
+    };
 
-  const menuMainClickHandler = (e) => {
-    if (typeof window !== "undefined" && window.innerWidth <= 991) {
-      document.querySelectorAll(".nav-item").forEach(item => {
-        item.classList.remove("active");
-      });
+    window.addEventListener("popstate", handleRouteChange);
+    handleRouteChange();
 
-      const hasChildren = e.target.closest(".nav-item-has-children");
-      if (hasChildren) {
-        e.preventDefault();
-        if (hasChildren.classList.contains("nav-item-has-children")) {
-          showSubMenu(hasChildren);
-        }
-      }
-    }
-  };
+    return () => {
+      window.removeEventListener("popstate", handleRouteChange);
+    };
+  }, []);
 
-  const goBackClickHandler = () => {
-    const lastItem = subMenuArray.slice(-1)[0];
-    const lastItemText = subMenuTextArray.slice(-2)[0];
-    setSubMenuArray(subMenuArray.slice(0, -1));
-    setSubMenuTextArray(subMenuTextArray.slice(0, -1));
-    if (lastItem) {
-      if (subMenuArray.length >= 0) {
-        if (
-          !document
-            .getElementById(lastItem)
-            .classList.contains("nav-item-has-children")
-        ) {
-          document.getElementById(lastItem).style.animation =
-            "slideRight 0.5s ease forwards";
-          document.querySelector(".current-menu-title").innerHTML =
-            lastItemText;
-          setTimeout(() => {
-            document.getElementById(lastItem).classList.remove("active");
-          }, 300);
-        } else {
-          document.querySelector(".go-back").classList.remove("active");
-        }
-      }
-    }
-    if (subMenuArray.length === 1) {
-      document.querySelector(".mobile-menu-head").classList.remove("active");
-    }
+  // Define the styles for the active link
+  const activeLinkStyle = {
+    color: "blue", // Change this to your desired color
+    fontWeight: "bold", // You can add additional styles as needed
   };
 
   const menuTriggerClickHandler = () => {
@@ -62,11 +36,10 @@ const Header = ({ logoSrc }) => {
   const closeMenuClickHandler = () => {
     toggleMenu();
     const submenuAll = document.querySelectorAll(".sub-menu");
-    submenuAll.forEach(submenu => {
+    submenuAll.forEach((submenu) => {
       submenu.classList.remove("active");
       submenu.style.animation = "";
     });
-  
     document.querySelector(".go-back").classList.remove("active");
   };
 
@@ -92,19 +65,21 @@ const Header = ({ logoSrc }) => {
     document.querySelector(".mobile-menu-head").classList.add("active");
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (typeof window !== "undefined" && window.innerWidth > 991 && isActive) {
-        toggleMenu();
+  const menuMainClickHandler = (e) => {
+    if (typeof window !== "undefined" && window.innerWidth <= 991) {
+      document.querySelectorAll(".nav-item").forEach((item) => {
+        item.classList.remove("active");
+      });
+
+      const hasChildren = e.target.closest(".nav-item-has-children");
+      if (hasChildren) {
+        e.preventDefault();
+        if (hasChildren.classList.contains("nav-item-has-children")) {
+          showSubMenu(hasChildren);
+        }
       }
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [isActive]);
+    }
+  };
 
   return (
     <header
@@ -115,68 +90,80 @@ const Header = ({ logoSrc }) => {
         <nav className="navbar site-navbar">
           <BrandLogo imageSrc="/images/logo/logo.png" />
           <div className="menu-block-wrapper">
-            <div className="menu-overlay"></div>
+            <div className="menu-overlay" onClick={overlayClickHandler}></div>
             <nav
               className={`menu-block ${isActive ? "active" : ""}`}
               id="append-menu-header"
             >
               <div className="mobile-menu-head">
-                <div className="go-back" onClick={goBackClickHandler}>
+                <div className="go-back">
                   <FaAngleLeft />
                 </div>
                 <div className="current-menu-title"></div>
-                <div
-                  className="mobile-menu-close"
-                  onClick={closeMenuClickHandler}
-                >
-                  {" "}
+                <div className="mobile-menu-close" onClick={closeMenuClickHandler}>
                   &times;
                 </div>
               </div>
               <ul className="site-menu-main" onClick={menuMainClickHandler}>
-              <li className="nav-item">
-                  <Link href="/" className="nav-link-item">
-                   Home
+                <li className="nav-item">
+                  <Link
+                    href="/"
+                    className="nav-link-item"
+                    style={currentPath === "/" ? activeLinkStyle : {}}
+                  >
+                    Home
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/service" className="nav-link-item">
+                  <Link
+                    href="/service"
+                    className="nav-link-item"
+                    style={currentPath === "/service" ? activeLinkStyle : {}}
+                  >
                     Services
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/Projects" className="nav-link-item">
+                  <Link
+                    href="/Projects"
+                    className="nav-link-item"
+                    style={currentPath === "/Projects" ? activeLinkStyle : {}}
+                  >
                     Projects
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/about-us" className="nav-link-item">
+                  <Link
+                    href="/about-us"
+                    className="nav-link-item"
+                    style={currentPath === "/about-us" ? activeLinkStyle : {}}
+                  >
                     About Us
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/Partners" className="nav-link-item">
+                  <Link
+                    href="/Partners"
+                    className="nav-link-item"
+                    style={currentPath === "/Partners" ? activeLinkStyle : {}}
+                  >
                     Partners
                   </Link>
                 </li>
-                {/* <li className="flex md:hidden lg:hidden nav-item">
-                  <Link href="/Partners" className="nav-link-item">
-                    Partners
-                  </Link>
-                </li> */}
-                
               </ul>
             </nav>
           </div>
 
           <div className="header-btn header-btn-l1 ms-auto d-none d-xs-inline-flex">
-          <Link href="/contact-us">
-              
-              <button style={{borderRadius:5}} className="w-full  bg-blue-600 text-white block px-3 py-2 text-base font-medium hover:bg-blue-500">
+            <Link href="/contact-us">
+              <button
+                style={{ borderRadius: 5 }}
+                className="w-full bg-blue-600 text-white block px-3 py-2 text-base font-medium hover:bg-blue-500"
+              >
                 Contact Us
               </button>
             </Link>
-            </div>
+          </div>
           <div
             className="mobile-menu-trigger light"
             onClick={menuTriggerClickHandler}

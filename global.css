@@ -2,6 +2,12 @@
   @tailwind components;
   @tailwind utilities;
 
+  .active {
+    /* Styles for the active link */
+    color: blue;
+    font-weight: bold;
+  }
+
   @layer base {
     :root {
       --background: 0 0% 100%;

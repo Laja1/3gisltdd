@@ -34,9 +34,10 @@ export default function Service() {
           </div>
          
            <div className="pt-10 items-center justify-center  grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
-                {serviceData.map((item) =>
+                {serviceData.map((item,index) =>
                       <motion.div
-          initial={{ opacity: 0, y: 50 }}
+                    initial={{ opacity: 0, y: 50 }}
+                    key={index}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: 'easeIn' }} className="lg:w-[380px] w-[330px] md:[360px] rounded-lg  h-[600px]   border-[1px] shadow-xl  border-[#fdfdf] flex flex-col ">
                       <img src={item.imageUrl} alt={item.imageAlt} className="rounded-t-lg " />

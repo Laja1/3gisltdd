@@ -9,6 +9,7 @@ const HomeHeader = ({ logoSrc, roundedBtn }) => {
   const [subMenuArray, setSubMenuArray] = useState([]);
   const [subMenuTextArray, setSubMenuTextArray] = useState([]);
   const [scrollClassName, setScrollClassName] = useState("");
+  const [currentPath, setCurrentPath] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,12 +20,24 @@ const HomeHeader = ({ logoSrc, roundedBtn }) => {
       }
     };
 
+    const handleRouteChange = () => {
+      setCurrentPath(window.location.pathname);
+    };
+
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("popstate", handleRouteChange);
+    handleRouteChange();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("popstate", handleRouteChange);
     };
   }, []);
+
+  const activeLinkStyle = {
+    color: "blue",
+    fontWeight: "bold",
+  };
 
   const menuMainClickHandler = (e) => {
     if (typeof window !== "undefined" && window.innerWidth <= 991) {
@@ -135,7 +148,7 @@ const HomeHeader = ({ logoSrc, roundedBtn }) => {
         <nav className="navbar site-navbar">
           <BrandLogo imageSrc={logoSrc} />
           <div className="menu-block-wrapper">
-            <div className="menu-overlay"></div>
+            <div className="menu-overlay" onClick={overlayClickHandler}></div>
             <nav
               className={`menu-block ${isActive ? "active" : ""}`}
               id="append-menu-header"
@@ -154,49 +167,68 @@ const HomeHeader = ({ logoSrc, roundedBtn }) => {
                 </div>
               </div>
               <ul className="site-menu-main" onClick={menuMainClickHandler}>
-              <li className="nav-item">
-                  <Link href="/" className="nav-link-item">
-                   Home
+                <li className="nav-item">
+                  <Link
+                    href="/"
+                    className="nav-link-item"
+                    style={currentPath === "/" ? activeLinkStyle : {}}
+                  >
+                    Home
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/service" className="nav-link-item">
+                  <Link
+                    href="/service"
+                    className="nav-link-item"
+                    style={currentPath === "/service" ? activeLinkStyle : {}}
+                  >
                     Services
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/Projects" className="nav-link-item">
+                  <Link
+                    href="/Projects"
+                    className="nav-link-item"
+                    style={currentPath === "/Projects" ? activeLinkStyle : {}}
+                  >
                     Projects
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/about-us" className="nav-link-item">
+                  <Link
+                    href="/about-us"
+                    className="nav-link-item"
+                    style={currentPath === "/about-us" ? activeLinkStyle : {}}
+                  >
                     About Us
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/Partners" className="nav-link-item">
+                  <Link
+                    href="/Partners"
+                    className="nav-link-item"
+                    style={currentPath === "/Partners" ? activeLinkStyle : {}}
+                  >
                     Partners
                   </Link>
                 </li>
-                
-                
               </ul>
             </nav>
           </div>
 
           <div className="header-btn header-btn-l1 ms-auto d-none d-xs-inline-flex">
             <Link href="/contact-us">
-              
-            <button style={{borderRadius:5}} className="w-full  bg-blue-600 text-white block px-3 py-2 text-base font-medium hover:bg-blue-500">
-              Contact Us
-            </button>
-          </Link>
+              <button
+                style={{ borderRadius: 5 }}
+                className="w-full  bg-blue-600 text-white block px-3 py-2 text-base font-medium hover:bg-blue-500"
+              >
+                Contact Us
+              </button>
+            </Link>
           </div>
           <div
             className="mobile-menu-trigger light"
-            onClick={menuTriggerClickHandler}
-          >
+            onClick={menuTriggerClickHandler} >
             <span></span>
           </div>
         </nav>

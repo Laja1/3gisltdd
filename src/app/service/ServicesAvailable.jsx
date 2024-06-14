@@ -12,7 +12,7 @@ export default function ServiceData() {
             <div className=" ui branding">
             <div className="collection-grid-item zubuz-portfolio-wrap branding ui">
               <div className="zubuz-portfolio-thumb">
-                <img src="/images/service/project_mg.png" alt="" />
+                <img src="/images/service/project_mgg.jpg" alt="" />
                 <div className="zubuz-portfolio-data">
                 <div className="flex-row flex items-center justify-between">  <Link href="/service/1">
                     <p>Project Management Consulting</p>
@@ -40,7 +40,7 @@ export default function ServiceData() {
           <div className=" ui">
             <div className="collection-grid-item zubuz-portfolio-wrap ui">
               <div className="zubuz-portfolio-thumb">
-                <img src="/images/service/app_dev.jpg" alt="" />
+                <img src="/images/service/app_devv.jpg" alt="" />
                 <div className="zubuz-portfolio-data">
                 <div className="flex-row flex items-center justify-between">  <Link href="/service/3">
                     <p>E-Commerce & Network Security</p>
