@@ -7,7 +7,7 @@ const BrandLogo = ({ imageSrc }) => {
   return (
     <div className="brand-logo">
       <Link href="/">
-        <img src={logoSrc} alt="" className="light-version-logo" />
+        <img src={logoSrc} alt="" className="light-version-logo w-14 lg:w-24" />
       </Link>
     </div>
   );

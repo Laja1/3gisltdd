@@ -1,20 +1,19 @@
-
-import Footer from "~/components/Section/Common/Footer/Footer";
 import PageHeader from "~/components/Section/Common/PageHeader";
-// import Projects from "~/components/Section/Common/Pricing";
-import { Header } from "~/components/Section/Common/Header";
-import Projects from "~/components/Section/Project/Project";
+import Footer from "~/components/Section/Common/Footer/Footer";
+import ServiceSection from "~/components/Section/Service/Service/Service";
+import PricingSection from "~/components/Section/Common/Pricing/Pricing";
+import Header from "~/components/Section/Common/Header/Header";
+import ServicesData from "./ServicesAvailable";
 
-export default function HomeThreePage() {
+
+export default function ServicePage() {
   return (
     <>
-      <Header roundedBtn="true" />
+      <Header />
       <PageHeader title="Our Projects" />
-      {/* <StateSection /> */}
-      {/* <Projects /> */}
-<Projects />
-      {/* <TestimonialSection /> */}
-      {/* <FAQSection /> */}
+    
+      <ServicesData />
+      {/* <ServiceSection /> */}
       <Footer />
     </>
   );

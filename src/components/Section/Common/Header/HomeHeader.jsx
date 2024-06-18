@@ -35,7 +35,7 @@ const HomeHeader = ({ logoSrc, roundedBtn }) => {
   }, []);
 
   const activeLinkStyle = {
-    color: "blue",
+    color: "#2D5ED8",
     fontWeight: "bold",
   };
 
@@ -141,7 +141,7 @@ const HomeHeader = ({ logoSrc, roundedBtn }) => {
 
   return (
     <header
-      className={`site-header site-header--menu-center zubuz-header-section bg-white ${scrollClassName}`}
+      className={`site-header site-header--menu-center  bg-white ${scrollClassName}`}
       id="sticky-menu"
     >
       <div className="container">
@@ -176,15 +176,7 @@ const HomeHeader = ({ logoSrc, roundedBtn }) => {
                     Home
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <Link
-                    href="/service"
-                    className="nav-link-item"
-                    style={currentPath === "/service" ? activeLinkStyle : {}}
-                  >
-                    Services
-                  </Link>
-                </li>
+               
                 <li className="nav-item">
                   <Link
                     href="/Projects"

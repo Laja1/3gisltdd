@@ -5,12 +5,12 @@ const ContentSection = () => {
         <div className="flex flex-col lg:flex-row gap-10 items-center justify-center">
           <div className="w-full lg:w-1/2 flex justify-center">
             <div className="zubuz-v3-thumb max-w-xs lg:max-w-full">
-              <img src="/images/v3/home.png" alt="Thumb Image" className="rounded-xl max-w-full h-auto" />
+              <img src="/images/about/aboutUs.jpg" alt="Thumb Image" className="rounded-xl max-w-full h-full" />
             </div>
           </div>
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-start px-5">
             <div className="zubuz-default-content text-center lg:text-left max-w-lg">
-              <h2 className="text-5xl md:text-4xl text-3xl font-bold">Our Core</h2>
+              <h2 className=" lg:text-4xl text-3xl font-bold">Our Core</h2>
               <div className="zubuz-extara-mt mt-6 lg:mt-8">
                 <div className="zubuz-iconbox-wrap-left mw-100 flex flex-col items-center lg:items-center mb-6 lg:mb-8">
                   <div className="zubuz-iconbox-icon none-bg mb-4 lg:mb-0">

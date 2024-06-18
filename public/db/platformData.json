@@ -1,19 +1,6 @@
 [
   
-  {
-    "name": "SecuGen Corporation",
-   
-    "description": "SecuGen Corporation is the world's leading provider of advanced, optical fingerprint recognition technology, products, tools and platforms. Known for their extreme durability, accuracy, and support for a wide range of platforms, SecuGen's fingerprint biometric products include FBI-certified fingerprint sensors. 3GIS is in partnership with SecuGen as an Independent Software Vendor providing identity management based applications.",
-    "link": "",
-    "icon": "/images/icon/secugen.jpg"
-  },
-  {
-    "name": "Advanced Card Systems Ltd",
-   
-    "description": "Advanced Card Systems Ltd. founded in 1995, is one of the world's top 3 suppliers of PC-linked smart card readers, as well as the winner of the Product Quality Leadership Award for Smart Card Readers from Frost & Sullivan. A leader in the smart card industry, ACS has the technology, expertise and global resources to facilitate an easier adoption of smart card applications in different industries across the globe. 3GIS is in partnership with ACS as a Value Added Reseller of its smart card products to further enhance electronic banking and commerce.",
-    "link": "",
-    "icon": "/images/icon/acs_logo.jpg"
-  },
+
   {
     "name": "Nitgen Biometric Solution",
   
@@ -29,15 +16,29 @@
   },{
     "name": "Smartsheet Corporation",
    
-    "description": "Smartsheet is a software as a service offering for collaboration and work management, used to assign tasks, track project progress, manage calendars, share documents, and manage other work, using a tabular user interface. The is platform is used by 3GIS to automate business processes and provides real-time and online visibility to the management of the organization.",
+    "description": "Smartsheet is a software as a service offering for collaboration and work management, used to assign tasks, track project progress, manage calendars, share documents, and manage other work, using a tabular user interface. The is platform is used by 3GIS to automate business processes and provides real-time and online visibility to the management of the organization. 3GIS is a certified Smartsheet Product Expert.",
     "link": "",
     "icon": "/images/icon/smartsheet.svg"
   },
   {
     "name": "Cynergy Wattmon",
    
-    "description": "SecuGen Corporation is the world's leading provider of advanced, optical fingerprint recognition technology, products, tools and platforms. Known for their extreme durability, accuracy, and support for a wide range of platforms, SecuGen's fingerprint biometric products include FBI-certified fingerprint sensors. 3GIS is in partnership with SecuGen as an Independent Software Vendor providing identity management based applications.",
+    "description": "Cynergy provide Internet of Things (IoT) Solution for Power Monitoring targeted at enterprise and SME customers. The solution includes a special-purpose IoT data logger hardware deployed at the power backup point (inverter or UPS) connected to the batteries. 3GIS is a strategic partner to Cynergy for this solution.",
     "link": "",
     "icon": "/images/icon/cynergy.png"
+  },
+  {
+    "name": "Project Management Institute",
+   
+    "description": "The project Management Institute (PMI) is the world’s largest project manager community, connecting people with thought leaders and trend-setters around the globe. PMI is the global authority in project management, promoting agile and waterfall frameworks and committed to advancing the project management profession. 3GIS is a certified Project Management Professional with the PMI and a long standing member of the institute.",
+    "link": "",
+    "icon": "/images/icon/curso-gratis.jpeg"
+  },
+  {
+    "name": "Atarapay",
+   
+    "description": "AtaraPay is a web and mobile tool used by seller and buyer for protection during any online or offline commercial transaction through funds held in escrow by a trusted third-party. This service provides 100% fraud-free transaction on online transactions. 3GIS is a strategic partner, providing AtaraPay escrow payment integrations on WordPress websites.",
+    "link": "",
+    "icon": "/images/icon/atarapay.png"
   }
 ]

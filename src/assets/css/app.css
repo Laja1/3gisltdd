@@ -2319,7 +2319,7 @@ h3.entry-title {
 .post-item .post-title {
   font-size: 21px;
   font-weight: 700;
-  color: var(--heading-color);
+  color: '#2D5ED8';
   line-height: 24px; /* 133.333% */
   font-family: var(--font-raleway);
 }
@@ -3121,7 +3121,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
 
 .zubuz-breadcrumb {
   text-align: center;
-  padding: 95px 0 90px;
+  padding: 115px 0 90px;
   background-color: var(--dark-bg);
 }
 @media (max-width: 991px) {

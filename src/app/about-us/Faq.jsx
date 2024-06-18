@@ -21,12 +21,12 @@ const accordionData = [
   {
     title: "Implement",
     content:
-      "We now build the final product, marrying all the parts into one complete solution. If required, we can integrate the solution into your own in-house systems ready for the launch. The project deliverables are all thoroughly tested and quality assured again before the launch and you'll receive any training required managing and maintaining it.",
+      "We now build the final product, marrying all the parts into one complete solution. If required, we can integrate the solution into your own in-house systems ready for the launch. The project deliverables are all thoroughly tested and quality assured again before and after the launch and you'll receive any training required managing and maintaining it.",
   },
   {
     title: "Enhance",
     content:
-      "Absolutely. We understand the importance of seamless integration. Our SaaS solution is designed to work harmoniously with a variety of popular tools and platforms, ensuring a smooth workflow and reducing any disruptions to your current processes.",
+      "After the successful launch of your project, we provide monitoring of the solution and process suggesting any upgrades down the line ensuring continuous improvement of the solution to achieve your medium and long term goals.",
   },
 ];
 

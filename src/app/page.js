@@ -1,4 +1,4 @@
-import ContentSectionTwo from "~/components/Section/Home-3/Content-2/ContentTwo";
+
 import ContentSection from "~/components/Section/Home-3/Content/Content";
 import HeroSection from "~/components/Section/Home-3/Hero/Hero";
 import TestimonialSection from "~/components/Section/Common/Integration-2/IntegrationTwo";
@@ -11,6 +11,7 @@ import ContentSectionThree from "~/components/Section/Home-3/Content-3/ContentTw
 import Projects from "~/components/Section/Common/Pricing";
 import "scrolling-features-react/dist/style.css";
 import Service from "~/components/Section/Home-3/Ourservice/page";
+import HomeProject from "~/components/Section/Common/OurProjects/HomeProject";
 
 export default function HomeThreePage() {
   return (
@@ -18,15 +19,7 @@ export default function HomeThreePage() {
       <HomeHeader roundedBtn="true" />
       <HeroSection />
  <Service />    
-      {/* <ContentSection />
-      <ContentSectionTwo />
-      <ContentSectionThree /> */}
-
-      {/* <StateSection /> */}
-      {/* <Projects /> */}
-
-      {/* <TestimonialSection /> */}
-      {/* <FAQSection /> */}
+     <HomeProject />
       <ServiceSection />
       <Footer />
     </>

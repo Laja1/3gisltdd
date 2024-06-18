@@ -28,28 +28,40 @@ import { motion } from 'framer-motion'
 export default function Service() {
   return (
     <div className="bg-[#fff] py-5 flex flex-col  items-center justify-center  w-full">
-    <div className="py-5 items-center justify-center flex flex-col">
-       <h1 className="playfair-display  py-2 text-xl text-black md:text-2xl lg:text-3xl font-bold">Our Services</h1>
-          <div className="w-14  h-1  rounded-full bg-[#BCDBFF]"/>
-          </div>
-         
-           <div className="pt-10 items-center justify-center  grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
-                {serviceData.map((item,index) =>
-                      <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    key={index}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: 'easeIn' }} className="lg:w-[380px] w-[330px] md:[360px] rounded-lg  h-[600px]   border-[1px] shadow-xl  border-[#fdfdf] flex flex-col ">
-                      <img src={item.imageUrl} alt={item.imageAlt} className="rounded-t-lg " />
-                      <div className="px-5  flex flex-col">
-                        
-                              <p className="font-bold poppins-medium  pt-3 text-center">{item.title}</p>
-                          <p className="text-[13px]  open-sans leading-loose text-[#56627b] py-3">{item.description}</p>
-                          
-                      </div>
-                  </motion.div>
- ) }
-          </div>
+      <div className="py-5 items-center justify-center flex flex-col">
+        <h1 className="playfair-display  py-2 text-xl text-black md:text-2xl lg:text-3xl font-bold">
+          Our Services
+        </h1>
+        <div className="w-14  h-1  rounded-full bg-[#2D5ED8]" />
+      </div>
+
+      <div className="pt-10 items-center justify-center  grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+        {serviceData.map((item, index) => (
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            key={index}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeIn" }}
+            style={{ borderRadius: 10 }}
+            className="lg:w-[380px] w-[330px] md:[360px] rounded-lg  h-[600px]   border-[1px] shadow-xl  border-[#fdfdf] flex flex-col "
+          >
+            <img
+              src={item.imageUrl}
+              alt={item.imageAlt}
+              className="rounded-t-lg "
+              style={{ borderTopLeftRadius: 10, borderTopRightRadius: 10 }}
+            />
+            <div className="px-5  flex flex-col">
+              <p className="font-bold poppins-medium  pt-3 text-center">
+                {item.title}
+              </p>
+              <p className="text-[13px]  open-sans leading-loose text-[#56627b] py-3">
+                {item.description}
+              </p>
+            </div>
+          </motion.div>
+        ))}
+      </div>
     </div>
-  )
+  );
 }

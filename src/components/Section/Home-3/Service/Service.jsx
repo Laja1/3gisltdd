@@ -23,6 +23,12 @@ const ServiceSection = () => {
             <div className="zubuz-brand-item">
               <img className="h-15 w-32" src="/images/v1/laspa.png" alt="" />
             </div>
+              <div className="zubuz-brand-item">
+              <img className="h-15 w-32" src="/images/v1/Fedex.png" alt="" />
+            </div>
+              <div className="zubuz-brand-item">
+              <img className="h-15 w-32" src="/images/v1/Verizon.jpeg" alt="" />
+            </div>
             <div className="zubuz-brand-item">
               <img className="h-15 w-32" src="/images/v1/mtn.svg" alt="" />
             </div>
@@ -38,7 +44,12 @@ const ServiceSection = () => {
             <div className="zubuz-brand-item">
               <img className="h-15 w-32" src="/images/v1/laspa.png" alt="" />
             </div>
-          
+          <div className="zubuz-brand-item">
+              <img className="h-15 w-32" src="/images/v1/Fedex.png" alt="" />
+            </div>
+              <div className="zubuz-brand-item">
+              <img className="h-15 w-32" src="/images/v1/Verizon.jpeg" alt="" />
+            </div>
           </Marquee>
           {/* <div className="zubuz-brand-slider3">
             <div className="zubuz-brand-item">

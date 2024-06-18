@@ -3,7 +3,7 @@
 import Link from "next/link";
 import {
   FaFacebookF,
-  FaGithub,
+ 
   FaInstagram,
   FaLinkedin,
   FaTwitter,
@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="col-xl-4 col-lg-12">
               <div className="zubuz-footer-textarea">
                 <Link href="">
-                  <img src="/images/logo/logo.png" alt="" className="w-[150px]"/>
+                  <img src="/images/logo/logo.png" alt="" className="w-[120px]"/>
                 </Link>
                 <p className='text-sm'>
                   We're your innovation partner, delivering cutting-edge
@@ -62,7 +62,9 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
+    
           </div>
+          
         </div>
         <div className="zubuz-footer-bottom">
           <div className="zubuz-social-icon order-md-2">

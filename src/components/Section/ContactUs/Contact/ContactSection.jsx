@@ -20,7 +20,7 @@ const ContactSection = () => {
                       US Office: 10, Hillcrest Avenue, West Orange, NJ. 07052.
                     </p>
                     <p className="text-sm leading-loose  open-sans">
-                      Nigeria Office: 40b, Commercial Avenue, Yaba, Lagos.
+                      Nigeria Office: 20, Fola Agoro Street, Shomolu, Lagos.
                     </p>
                   </div>
                 </div>
