@@ -2,7 +2,7 @@ const ContentSection = () => {
   return (
     <div className="section zubuz-section-padding2">
       <div className="container flex flex-col gap-10 items-center justify-center">
-       <div className="flex lg:flex-row flex-col-reverse md:flex-col-reverse py-5 gap-10 items-center justify-center">
+       <div className="flex lg:flex-row flex-col-reverse md:flex-col-reverse py-5 gap-5 lg:gap-10 items-center justify-center">
   <div className="w-full lg:order-first flex justify-center lg:justify-start px-5">
             <div className="zubuz-default-content text-center lg:text-center max-w-lg">
              
