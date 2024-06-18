@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="col-xl-4 col-lg-12">
               <div className="zubuz-footer-textarea">
                 <Link href="">
-                  <img src="/images/logo/logo.png" alt="" className="w-[120px]"/>
+                  <img src="/images/logo/logo.png" alt="" className="w-full"/>
                 </Link>
                 <p className='text-sm'>
                   We're your innovation partner, delivering cutting-edge

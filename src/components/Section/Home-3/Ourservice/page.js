@@ -56,8 +56,9 @@ export default function Service() {
                 {item.title}
               </p>
               <p className="text-[13px]  open-sans leading-loose text-[#56627b] py-3">
-                {item.description}
+                {item.description} <p className='text-sm text-blue-600 items-center'>Read More...</p>
               </p>
+              
             </div>
           </motion.div>
         ))}
