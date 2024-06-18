@@ -4,21 +4,21 @@ import Link from 'next/link';
     const serviceData = [
       {
         title: 'The MarketPlace by AtaraPay',
-        description: 'This is a multi-vendor online marketplace designed to bridge the gap between buyers and sellers of virtually all types of goods and services. It includes the option to make payment with escrow, thereby giving both buyer and seller the assurance of a 100% fraud-free transaction on the marketplace.',
+        description: 'This is a multi-vendor online marketplace designed to bridge the gap between buyers and sellers of virtually all types of goods and services. It includes the option to make payment with escrow, thereby giving both buyer and seller the assurance of a 100% fraud-free transaction on the marketplace...',
          imageUrl:"/images/project/Marketplace.jpeg",
         imageAlt: 'MarketPlace by AtaraPay',
         reversed: false, // Normal layout
       },
       {
          title: 'Mobile App for Business',
-    description: 'MTN BizApp is a mobile app developed specifically to cater to Small and Medium Businesses (SMBs) that are subscribed to the MTN network across all its Operating Companies in Africa and the Middle East. It is designed to help SMBs leverage Social Media as an online growth strategy and access MTN Services such as the MTN Bulk SMS and Online Directory.',
+    description: 'MTN BizApp is a mobile app developed specifically to cater to Small and Medium Businesses (SMBs) that are subscribed to the MTN network across all its Operating Companies in Africa and the Middle East. It is designed to help SMBs leverage Social Media as an online growth strategy and access MTN Services such as the MTN Bulk SMS and Online Directory...',
   imageUrl: '/images/project/MobileAppForBusiness.jpeg',
         imageAlt: 'Mobile App for Business',
         reversed: true, // Reversed layout
       },
       {
         title: 'Shipment & Warehouse Management Solution',
-    description: 'International and domestic freight companies are challenged with providing on-time notification to their customers on the whereabouts of their goods being shipped from the source to destination location. 3GIS integrated its shipments tracking solution for Sailbond Shipping which enables its logistics team to update the shipment milestones on the app.',
+    description: 'International and domestic freight companies are challenged with providing on-time notification to their customers on the whereabouts of their goods being shipped from the source to destination location. 3GIS integrated its shipments tracking solution for Sailbond Shipping which enables its logistics team to update the shipment milestones on the app...',
      imageUrl: '/images/project/ShipmentTracking.jpeg',
         imageAlt: 'Shipment & Warehouse Management Solution',
         reversed: false, // Normal layout

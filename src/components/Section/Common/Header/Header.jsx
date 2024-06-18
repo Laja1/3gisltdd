@@ -83,12 +83,12 @@ const Header = ({ logoSrc }) => {
 
   return (
     <header
-      className="site-header site-header--menu-center  dark-bg white-menu"
+      className="site-header site-header--menu-center zubuz-header-section dark-bg white-menu"
       id="sticky-menu"
     >
       <div className="container">
         <nav className="navbar site-navbar">
-          <BrandLogo imageSrc="/images/logo/logo.png" className=''/>
+          <BrandLogo imageSrc="/images/logo/logoDark.svg" className=''/>
           <div className="menu-block-wrapper">
             <div className="menu-overlay" onClick={overlayClickHandler}></div>
             <nav

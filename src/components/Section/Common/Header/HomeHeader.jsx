@@ -141,7 +141,7 @@ const HomeHeader = ({ logoSrc, roundedBtn }) => {
 
   return (
     <header
-      className={`site-header site-header--menu-center  bg-white ${scrollClassName}`}
+      className={`site-header site-header--menu-center  zubuz-header-section bg-white ${scrollClassName}`}
       id="sticky-menu"
     >
       <div className="container">

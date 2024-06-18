@@ -14,7 +14,7 @@ const AboutPage = () => {
       <Header />
       <PageHeader title="About Us" />
     
-      <Vision />
+      {/* <Vision /> */}
       <ContentSection />
       
       <Methodology />
