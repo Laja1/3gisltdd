@@ -12,11 +12,13 @@ import Projects from "~/components/Section/Common/Pricing";
 import "scrolling-features-react/dist/style.css";
 import Service from "~/components/Section/Home-3/Ourservice/page";
 import HomeProject from "~/components/Section/Common/OurProjects/HomeProject";
+import { Header } from "~/components/Section/Common/Header";
 
 export default function HomeThreePage() {
   return (
     <>
-      <HomeHeader roundedBtn="true" />
+      {/* <HomeHeader roundedBtn="true" /> */}
+      <Header />
       <HeroSection />
  <Service />    
      <HomeProject />

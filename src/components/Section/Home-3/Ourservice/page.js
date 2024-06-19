@@ -27,7 +27,8 @@ import { motion } from 'framer-motion'
     
 export default function Service() {
   return (
-    <div className="bg-[#fff] py-5 flex flex-col  items-center justify-center  w-full">
+    <section id="services"> 
+    <div id="services" className="bg-[#fff]  py-5 flex flex-col  items-center justify-center  w-full">
       <div className="py-5 items-center justify-center flex flex-col">
         <h1 className="playfair-display  py-2 text-xl text-black md:text-2xl lg:text-3xl font-bold">
           Our Services
@@ -56,13 +57,13 @@ export default function Service() {
                 {item.title}
               </p>
               <p className="text-[13px]  open-sans leading-loose text-[#56627b] py-3">
-                {item.description} <p className='text-sm text-blue-600 items-center'>Read More...</p>
+                {item.description} 
               </p>
               
             </div>
           </motion.div>
         ))}
       </div>
-    </div>
+    </div></section>
   );
 }

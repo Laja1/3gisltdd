@@ -10,6 +10,7 @@ const HomeHeader = ({ logoSrc, roundedBtn }) => {
   const [subMenuTextArray, setSubMenuTextArray] = useState([]);
   const [scrollClassName, setScrollClassName] = useState("");
   const [currentPath, setCurrentPath] = useState("");
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +32,30 @@ const HomeHeader = ({ logoSrc, roundedBtn }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("popstate", handleRouteChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
     };
   }, []);
 
@@ -176,12 +201,20 @@ const HomeHeader = ({ logoSrc, roundedBtn }) => {
                     Home
                   </Link>
                 </li>
-               
+                <li className="nav-item">
+                  <Link
+                    href="/services"
+                    className="nav-link-item"
+                    style={activeSection === "services" ? activeLinkStyle : {}}
+                  >
+                    Services
+                  </Link>
+                </li>
                 <li className="nav-item">
                   <Link
                     href="/Projects"
                     className="nav-link-item"
-                    style={currentPath === "/Projects" ? activeLinkStyle : {}}
+                    style={activeSection === "Projects" ? activeLinkStyle : {}}
                   >
                     Projects
                   </Link>
@@ -190,16 +223,16 @@ const HomeHeader = ({ logoSrc, roundedBtn }) => {
                   <Link
                     href="/about-us"
                     className="nav-link-item"
-                    style={currentPath === "/about-us" ? activeLinkStyle : {}}
+                    style={activeSection === "about-us" ? activeLinkStyle : {}}
                   >
                     About Us
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
-                    href="/Partners"
+                    href="/partners"
                     className="nav-link-item"
-                    style={currentPath === "/Partners" ? activeLinkStyle : {}}
+                    style={activeSection === "partners" ? activeLinkStyle : {}}
                   >
                     Partners
                   </Link>

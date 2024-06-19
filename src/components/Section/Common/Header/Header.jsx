@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import { FaAngleDown, FaAngleLeft } from "react-icons/fa";
 import BrandLogo from "~/components/Ui/Logo/BrandLogo";
 
@@ -9,6 +10,9 @@ const Header = ({ logoSrc }) => {
   const [isActive, setIsActive] = useState(false);
   const [subMenuArray, setSubMenuArray] = useState([]);
   const [subMenuTextArray, setSubMenuTextArray] = useState([]);
+  
+  const router = useRouter();
+  const servicesLinkRef = useRef(null);
 
   useEffect(() => {
     const handleRouteChange = () => {
@@ -18,15 +22,46 @@ const Header = ({ logoSrc }) => {
     window.addEventListener("popstate", handleRouteChange);
     handleRouteChange();
 
+    const servicesLink = servicesLinkRef.current;
+    if (servicesLink) {
+      servicesLink.addEventListener('click', handleServicesLinkClick);
+    }
+
+    const handleHashChange = () => {
+      if (window.location.hash === '#services') {
+        const targetSection = document.getElementById('services');
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+
+    // Check the initial hash on component mount
+    handleHashChange();
+
     return () => {
       window.removeEventListener("popstate", handleRouteChange);
+      if (servicesLink) {
+        servicesLink.removeEventListener('click', handleServicesLinkClick);
+      }
+      window.removeEventListener('hashchange', handleHashChange);
     };
   }, []);
 
-  // Define the styles for the active link
+  const handleServicesLinkClick = (e) => {
+    e.preventDefault();
+    if (currentPath === '/') {
+      window.location.hash = '#services';
+    } else {
+      router.push('/#services');
+    }
+  };
+
   const activeLinkStyle = {
-    color: "#2D5ED8", // Change this to your desired color
-    fontWeight: "bold", // You can add additional styles as needed
+    color: "#2D5ED8",
+    fontWeight: "bold",
   };
 
   const menuTriggerClickHandler = () => {
@@ -54,7 +89,7 @@ const Header = ({ logoSrc }) => {
 
   const showSubMenu = (hasChildren) => {
     const submenuAll = document.querySelectorAll(".sub-menu");
-    submenuAll.forEach((submenu) => submenu.classList.remove());
+    submenuAll.forEach((submenu) => submenu.classList.remove("active"));
     const subMenu = hasChildren.querySelector(".sub-menu");
     setSubMenuArray([...subMenuArray, subMenu.id]);
     subMenu.classList.add("active");
@@ -88,7 +123,7 @@ const Header = ({ logoSrc }) => {
     >
       <div className="container">
         <nav className="navbar site-navbar">
-          <BrandLogo imageSrc="/images/logo/logoDark.svg" className=''/>
+          <BrandLogo imageSrc="/images/logo/logoDark.svg" className="" />
           <div className="menu-block-wrapper">
             <div className="menu-overlay" onClick={overlayClickHandler}></div>
             <nav
@@ -114,7 +149,17 @@ const Header = ({ logoSrc }) => {
                     Home
                   </Link>
                 </li>
-               
+                <li className="nav-item">
+                  <Link
+                    href="/#services"
+                    ref={servicesLinkRef}
+                    className="nav-link-item"
+                    style={currentPath === "/services" ? activeLinkStyle : {}}
+                    onClick={handleServicesLinkClick}
+                  >
+                    Services
+                  </Link>
+                </li>
                 <li className="nav-item">
                   <Link
                     href="/Projects"

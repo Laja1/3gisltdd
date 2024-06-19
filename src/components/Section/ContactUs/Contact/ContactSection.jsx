@@ -1,12 +1,12 @@
 // components/ContactSection.jsx
 
-"use client"
-import React from 'react';
+"use client";
+import React, { useRef } from 'react';
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import axios from "axios";
+import emailjs from '@emailjs/browser';
 import { FaTwitter, FaFacebookF, FaLinkedin } from "react-icons/fa";
 
 const schema = yup.object().shape({
@@ -21,23 +21,27 @@ const ContactSection = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset, // Add reset function
   } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = async (data) => {
-    try {
-      const response = await axios.post('/api/sendMail', data);
+  const form = useRef();
 
-      if (response.status === 200) {
-        alert("Message sent successfully!");
-      } else {
-        alert(response.data.message);
-      }
-    } catch (error) {
-      console.error("Error sending message:", error);
-      alert("Failed to send message. Please try again later.");
-    }
+  const sendEmail = (data, e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_oqukn29', 'template_1v5d595', form.current, 'B7wWpjE6I7Ln-OPuJ')
+      .then(
+        () => {
+          alert('Message sent successfully!');
+          reset(); // Reset form fields after successful submission
+        },
+        (error) => {
+          console.error('Failed to send message:', error);
+          alert('Failed to send message. Please try again later.');
+        }
+      );
   };
 
   return (
@@ -92,7 +96,7 @@ const ContactSection = () => {
           <div className="col-lg-6">
             <div className="zubuz-form-wrap">
               <h3>Fill the form below</h3>
-              <form onSubmit={handleSubmit(onSubmit)}>
+              <form ref={form} onSubmit={handleSubmit(sendEmail)}>
                 <div className="row">
                   <div className="col-lg-6">
                     <div className="zubuz-main-form">

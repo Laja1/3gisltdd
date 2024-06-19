@@ -3,7 +3,7 @@ const ContentSection = () => {
     <div className="section zubuz-section-padding2">
       <div className="container flex flex-col gap-10 items-center justify-center">
        <div className="flex lg:flex-row flex-col-reverse md:flex-col-reverse py-5 gap-5 lg:gap-10 items-center justify-center">
-  <div className="w-full lg:order-first flex justify-center lg:justify-start px-5">
+  <div className="w-full lg:order-first flex justify-center lg:justify-start ">
             <div className="zubuz-default-content text-center lg:text-center max-w-lg">
              
               <div className="zubuz-extara-mt mt-6 lg:mt-8">
@@ -50,7 +50,7 @@ const ContentSection = () => {
               <img src="/images/about/aboutUs.jpg" alt="Thumb Image" className="rounded-xl max-w-full h-auto" />
             </div>
           </div>
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start px-5">
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start ">
             <div className="zubuz-default-content text-center lg:text-center max-w-lg">
               <div className=" items-center justify-center flex flex-col">
         <h1 className="playfair-display  py-2 text-xl text-black md:text-2xl lg:text-3xl font-bold">

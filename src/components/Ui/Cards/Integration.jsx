@@ -6,7 +6,7 @@ const IntegrationCard = ({ icon, name, category, description,  }) => {
       <div className="zubuz-iconbox-wrap-left d-block iconbox-left-border">
         <div className="zubuz-iconbox-header">
           <div className="zubuz-iconbox-icon">
-            <img src={icon} alt="" />
+            <img src={icon} alt="" className="w-80"/>
           </div>
           <div className="zubuz-iconbox-header-data">
             <h4>{name}</h4>

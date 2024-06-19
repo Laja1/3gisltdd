@@ -3,7 +3,7 @@ import Footer from "~/components/Section/Common/Footer/Footer";
 import ServiceSection from "~/components/Section/Service/Service/Service";
 import PricingSection from "~/components/Section/Common/Pricing/Pricing";
 import Header from "~/components/Section/Common/Header/Header";
-import ServicesData from "./ServicesAvailable";
+import ProjectsData from "./ProjectsAvailable";
 
 
 export default function ServicePage() {
@@ -12,7 +12,7 @@ export default function ServicePage() {
       <Header />
       <PageHeader title="Our Projects" />
     
-      <ServicesData />
+      <ProjectsData />
       {/* <ServiceSection /> */}
       <Footer />
     </>
