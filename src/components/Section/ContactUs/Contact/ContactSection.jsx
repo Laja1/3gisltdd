@@ -31,7 +31,7 @@ const ContactSection = () => {
   const sendEmail = (data, e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_oqukn29', 'template_1v5d595', form.current, 'B7wWpjE6I7Ln-OPuJ')
+    emailjs.sendForm('service', 'temp', form.current, '-OPuJ')
       .then(
         () => {
           alert('Message sent successfully!');
