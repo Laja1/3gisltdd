@@ -1,19 +1,23 @@
 import PageHeader from "~/components/Section/Common/PageHeader";
 import Footer from "~/components/Section/Common/Footer/Footer";
-import ServiceSection from "~/components/Section/Service/Service/Service";
-import PricingSection from "~/components/Section/Common/Pricing/Pricing";
+
 import Header from "~/components/Section/Common/Header/Header";
 import ProjectsData from "./ProjectsAvailable";
-
+import Head from "next/head";
 
 export default function ServicePage() {
   return (
     <>
+      <Head>
+        <title>Projects</title>
+        <meta name="description" content="Projects" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Header />
       <PageHeader title="Our Projects" />
-    
+
       <ProjectsData />
-      {/* <ServiceSection /> */}
+
       <Footer />
     </>
   );

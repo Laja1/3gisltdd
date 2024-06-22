@@ -1,7 +1,5 @@
-// components/ContactSection.jsx
-
 "use client";
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -10,10 +8,26 @@ import emailjs from '@emailjs/browser';
 import { FaTwitter, FaFacebookF, FaLinkedin } from "react-icons/fa";
 
 const schema = yup.object().shape({
-  name: yup.string().required("Name is required"),
-  email: yup.string().email("Email is invalid").required("Email is required"),
-  subject: yup.string().required("Subject is required"),
-  message: yup.string().required("Message is required"),
+  name: yup
+    .string()
+    .min(3, "Name must be at least 3 characters long")
+    .max(50, "Name can't be longer than 50 characters")
+    .required("Name is required"),
+  email: yup
+    .string()
+    .email("Email is invalid")
+    .max(100, "Email can't be longer than 100 characters")
+    .required("Email is required"),
+  subject: yup
+    .string()
+    .min(5, "Subject must be at least 5 characters long")
+    .max(100, "Subject can't be longer than 100 characters")
+    .required("Subject is required"),
+  message: yup
+    .string()
+    .min(10, "Message must be at least 10 characters long")
+    .max(500, "Message can't be longer than 500 characters")
+    .required("Message is required"),
 });
 
 const ContactSection = () => {
@@ -21,21 +35,28 @@ const ContactSection = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset, // Add reset function
+    reset,
   } = useForm({
     resolver: yupResolver(schema),
   });
 
   const form = useRef();
+  const [isHuman, setIsHuman] = useState(false);
 
   const sendEmail = (data, e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service', 'temp', form.current, '-OPuJ')
+    if (!isHuman) {
+      alert('Please confirm you are human.');
+      return;
+    }
+
+    emailjs.sendForm('service_oqukn29', 'template_1v5d595', form.current, 'B7wWpjE6I7Ln-OPuJ')
       .then(
         () => {
           alert('Message sent successfully!');
-          reset(); // Reset form fields after successful submission
+          reset();
+          setIsHuman(false); // Reset the toggle state after submission
         },
         (error) => {
           console.error('Failed to send message:', error);
@@ -50,7 +71,7 @@ const ContactSection = () => {
         <div className="row">
           <div className="col-lg-6">
             <div className="zubuz-default-content m-right">
-              <h2>Contact our support team</h2>
+              <h2 className='lg:text-6xl text-2xl font-bold md:text-4xl '>Contact our support team</h2>
               <p className="text-base leading-loose open-sans">
                 Book an appointment with our team now!
               </p>
@@ -123,8 +144,25 @@ const ContactSection = () => {
                   ></textarea>
                   {errors.message && <p className="error">{errors.message.message}</p>}
                 </div>
-                <button id="zubuz-submit-btn" type="submit">
-                  <span>Send Message</span>
+                <div className="zubuz-main-form">
+                  <label className="inline-flex items-center cursor-pointer">
+                    <input
+                      type="checkbox"
+                      value=""
+                      className="sr-only peer"
+                      checked={isHuman}
+                      onChange={() => setIsHuman(!isHuman)}
+                    />
+                    <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                    <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">I am a human</span>
+                  </label>
+                </div>
+                <button
+                  style={{ borderRadius: 5, backgroundColor: '#3b82f6' }}
+                  type='submit'
+                  className="w-full bg-blue-600 text-white block px-3 py-2 text-base font-medium hover:bg-blue-500"
+                >
+                  Send Message
                 </button>
               </form>
             </div>

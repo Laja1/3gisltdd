@@ -187,6 +187,15 @@ const Header = ({ logoSrc }) => {
                     Partners
                   </Link>
                 </li>
+                   <li className="block lg:hidden">
+                  <Link
+                    href="/contact-us"
+                    className="nav-link-item"
+                    style={currentPath === "/contact-us" ? activeLinkStyle : {}}
+                  >
+                    Contact Us
+                  </Link>
+                </li>
               </ul>
             </nav>
           </div>

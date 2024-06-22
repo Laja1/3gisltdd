@@ -47,7 +47,7 @@ const ContentSection = () => {
         <div className="flex flex-col lg:flex-row gap-10 items-center justify-center">
           <div className="w-full lg:w-1/2 flex justify-center">
             <div className="zubuz-v3-thumb max-w-xs lg:max-w-full">
-              <img src="/images/about/aboutUs.jpg" alt="Thumb Image" className="rounded-xl max-w-full h-auto" />
+              <img src="/images/about/aboutUs.jpg" alt="About Us" className="rounded-xl max-w-full h-auto" />
             </div>
           </div>
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-start ">

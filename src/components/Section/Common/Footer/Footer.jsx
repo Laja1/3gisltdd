@@ -2,12 +2,14 @@
 "use client"
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
 import {
   FaFacebookF,
   FaInstagram,
   FaLinkedin,
   FaTwitter,
 } from "react-icons/fa";
+
 
 const Footer = () => {
   const router = useRouter();
@@ -34,24 +36,13 @@ const Footer = () => {
             <div className="col-xl-4 col-lg-12">
               <div className="zubuz-footer-textarea">
                 <Link href="">
-                  <img src="/images/logo/logo.png" alt="" className="w-full" />
+                  <img src="/images/logo/logo.png" alt="logo" className="lg:w-64 imac:w-80 md:w-52 w-44" />
                 </Link>
-                <p className='text-sm'>
+                <p className='text-base'>
                   We're your innovation partner, delivering cutting-edge
                   solutions that elevate your business to the next level.
                 </p>
-                <div className="zubuz-subscribe-one">
-                  <form>
-                    <input type="email" placeholder="Email Address" />
-                    <button
-                      className="zubuz-default-btn zubuz-subscription-btn one"
-                      id="zubuz-subscription-btn"
-                      type="submit"
-                    >
-                      <span>Subscribe</span>
-                    </button>
-                  </form>
-                </div>
+               
               </div>
             </div>
             <div className="col-xl-3 text-white col-md-4">
@@ -60,22 +51,25 @@ const Footer = () => {
                   <p>Quick Links</p>
                 </div>
                 <ul className="space-y-5">
-                  <p className="text-white text-sm font-bold open-sans">
+                  <p className="text-white text-base font-bold open-sans">
                     <Link href="/">Home</Link>
                   </p>
-                  <p className="text-white text-sm font-bold open-sans">
+                  <p className="text-white text-base font-bold open-sans">
                     <Link href="/#services" onClick={handleServicesLinkClick}>
                       Services
                     </Link>
                   </p>
-                  <p className="text-white text-sm font-bold open-sans">
+                  <p className="text-white text-base font-bold open-sans">
                     <Link href="/Projects">Projects</Link>
                   </p>
-                  <p className="text-white text-sm font-bold open-sans">
+                  <p className="text-white text-base font-bold open-sans">
                     <Link href="/Partners">Partners</Link>
                   </p>
-                  <p className="text-white text-sm font-bold open-sans">
+                  <p className="text-white text-base font-bold open-sans">
                     <Link href="/about-us">About Us</Link>
+                  </p>
+                   <p className="text-white text-base font-bold open-sans">
+                    <Link href="/contact-us">Contact Us</Link>
                   </p>
                 </ul>
               </div>

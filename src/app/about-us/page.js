@@ -1,4 +1,4 @@
-
+import Head from "next/head";
 import ContentSection from "~/components/Section/AboutUs/Content/ContentSection";
 import FAQSection from "~/components/Section/Common/FAQ/FAQSection";
 import Vision from "~/components/Section/AboutUs/Vision/Vision";
@@ -11,12 +11,17 @@ import Methodology from "./Faq";
 const AboutPage = () => {
   return (
     <>
+      <Head>
+        <title>Home</title>
+        <meta name="description" content="Our Services, Our Project" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Header />
       <PageHeader title="About Us" />
-    
+
       {/* <Vision /> */}
       <ContentSection />
-      
+
       <Methodology />
 
       <Footer />

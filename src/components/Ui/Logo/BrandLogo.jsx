@@ -7,7 +7,7 @@ const BrandLogo = ({ imageSrc }) => {
   return (
     <div className="">
       <Link href="/">
-        <img src={logoSrc} alt="" className="lg:w-64 imac:w-80 md:w-52 w-44" />
+        <img src={logoSrc} alt="logo" className="lg:w-64 imac:w-80 md:w-52 w-44" />
       </Link>
     </div>
   );
