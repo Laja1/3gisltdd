@@ -14,7 +14,7 @@ export default function ProjectsData() {
               <div className="zubuz-portfolio-thumb">
                 <img src="/images/project/Marketplace.jpeg" className="w-full" alt="MarketPlace by AtaraPay" />
                 <div className="zubuz-portfolio-data">
-                <div className="flex-row flex items-center justify-between">  <Link href="/The-MarketPlace-by-Atarapay">
+                <div className="flex-row flex items-center justify-between">  <Link href="/projects/the-marketplace-by-atarapay">
                     <p className="lg:text-base text-sm">The MarketPlace by AtaraPay</p>
                   </Link>
                     <img src="/images/portfolio/arrow-right.svg" alt="" className="size-6"/>
@@ -28,7 +28,7 @@ export default function ProjectsData() {
               <div className="zubuz-portfolio-thumb">
                 <img src="/images/project/MobileAppForBusiness.jpeg" className="w-full" alt="Mobile App for Business" />
                 <div className="zubuz-portfolio-data">
-                <div className="flex-row flex items-center justify-between">  <Link href="/Mobile-App-for-Business">
+                <div className="flex-row flex items-center justify-between">  <Link href="/projects/mobile-app-for-business">
                     <p className='lg:text-base text-sm'>Mobile App for Business</p>
                   </Link>
                     <img src="/images/portfolio/arrow-right.svg" alt="" className="size-6"/>
@@ -42,7 +42,7 @@ export default function ProjectsData() {
               <div className="zubuz-portfolio-thumb">
                 <img src="/images/project/OnlineInterterMonitoring.jpeg" className="w-full" alt="Online Interter Monitoring" />
                 <div className="zubuz-portfolio-data">
-                <div className="flex-row flex items-center justify-between">  <Link href="/Online-Inverter-Monitoring-Solution">
+                <div className="flex-row flex items-center justify-between">  <Link href="/projects/online-inverter-monitoring-solution">
                     <p className='lg:text-base text-sm'>Online Inverter Monitoring Solution</p>
                   </Link>
                     <img src="/images/portfolio/arrow-right.svg" alt="" className="size-6"/>
@@ -56,7 +56,7 @@ export default function ProjectsData() {
               <div className="zubuz-portfolio-thumb">
                 <img src="/images/project/CloudHotspot.jpeg" className="w-full" alt="Cloud-Hotspot-Service" />
                 <div className="zubuz-portfolio-data">
-                <div className="flex-row flex items-center justify-between">  <Link href="/Cloud-Hotspot-Service">
+                <div className="flex-row flex items-center justify-between">  <Link href="/projects/cloud-hotspot-service">
                     <p className='lg:text-base text-sm'>Cloud Hotspot Service</p>
                   </Link>
                     <img src="/images/portfolio/arrow-right.svg" alt="" className="size-6"/>
@@ -70,7 +70,7 @@ export default function ProjectsData() {
               <div className="zubuz-portfolio-thumb">
                 <img src="/images/project/ShipmentTracking.jpeg" className="w-full" alt="Shipment & Warehouse Management Solution" />
                 <div className="zubuz-portfolio-data">
-                <div className="flex-row flex items-center justify-between">  <Link href="/shipmentTracking">
+                <div className="flex-row flex items-center justify-between">  <Link href="/projects/shipment-tracking">
                     <p className='lg:text-base text-sm'>Shipment & Warehouse Management Solution</p>
                   </Link>
                     <img src="/images/portfolio/arrow-right.svg" alt="" className="size-6"/>

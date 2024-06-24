@@ -1,0 +1,14 @@
+User-Agent: *
+Disallow: 
+Allow: /projects
+Allow: /about
+Allow: /contact-us
+Allow: /partners
+Allow: /services
+Allow: /projects/cloud-hotspot-service
+Allow: /projects/mobile-app-for-business
+Allow: /projects/online-inverter-monitoring-solution
+Allow: /projects/shipment-tracking
+Allow: /projects/the-marketplace-by-atarapay
+Sitemap: https://3g-mauve.vercel.app/sitemap.xml
+Sitemap: http://3gisltd.com/sitemap.xml

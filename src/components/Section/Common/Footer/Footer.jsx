@@ -60,13 +60,13 @@ const Footer = () => {
                     </Link>
                   </p>
                   <p className="text-white text-base font-bold open-sans">
-                    <Link href="/Projects">Projects</Link>
+                    <Link href="/projects">Projects</Link>
                   </p>
                   <p className="text-white text-base font-bold open-sans">
-                    <Link href="/Partners">Partners</Link>
+                    <Link href="/partners">Partners</Link>
                   </p>
                   <p className="text-white text-base font-bold open-sans">
-                    <Link href="/about-us">About Us</Link>
+                    <Link href="/about">About Us</Link>
                   </p>
                    <p className="text-white text-base font-bold open-sans">
                     <Link href="/contact-us">Contact Us</Link>

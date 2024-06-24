@@ -162,27 +162,27 @@ const Header = ({ logoSrc }) => {
                 </li>
                 <li className="nav-item">
                   <Link
-                    href="/Projects"
+                    href="/projects"
                     className="nav-link-item"
-                    style={currentPath === "/Projects" ? activeLinkStyle : {}}
+                    style={currentPath === "/projects" ? activeLinkStyle : {}}
                   >
                     Projects
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
-                    href="/about-us"
+                    href="/about"
                     className="nav-link-item"
-                    style={currentPath === "/about-us" ? activeLinkStyle : {}}
+                    style={currentPath === "/about" ? activeLinkStyle : {}}
                   >
                     About Us
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
-                    href="/Partners"
+                    href="/partners"
                     className="nav-link-item"
-                    style={currentPath === "/Partners" ? activeLinkStyle : {}}
+                    style={currentPath === "/partners" ? activeLinkStyle : {}}
                   >
                     Partners
                   </Link>
