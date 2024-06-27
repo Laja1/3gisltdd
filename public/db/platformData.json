@@ -1,0 +1,44 @@
+[
+  
+
+  {
+    "name": "Nitgen Biometric Solution",
+  
+    "description": "Through relentless efforts in R&D, and responding dynamically to demands from the biometric security market, NITGEN is rapidly becoming the leader in biometric application/technology markets. NITGEN has developed and now offers, advanced biometric authentication solutions, which would not have been possible without the core technologies for fingerprint recognition solutions that NITGEN has. 3GIS is in partnership with NITGEN as a Value Added Reseller of its security products.",
+    "link": "",
+    "icon": "/images/icon/nitgen_logo.jpg"
+  },
+  {
+    "name": "D-Link",
+    "description": "Founded in 1986, D-Link is a global leader in the design, manufacture and marketing of advanced IP networking, broadband, digital, voice and data communications solutions. D-Link continually meets the global networking and connectivity needs of digital home consumers, small office professionals, small- to medium-sized businesses, and enterprise environments. 3GIS believe IP is the future and therefore is in partnership with D-Link as a Value Added Reseller of its Networking products to provide IP connectivity solutions to small and medium-sized companies. These include IP CCTV Surveillance and Wireless solutions.",
+    "link": "",
+    "icon": "/images/icon/dlink_logo.jpg"
+  },{
+    "name": "Smartsheet Corporation",
+   
+    "description": "Smartsheet is a software as a service offering for collaboration and work management, used to assign tasks, track project progress, manage calendars, share documents, and manage other work, using a tabular user interface. The is platform is used by 3GIS to automate business processes and provides real-time and online visibility to the management of the organization. 3GIS is a certified Smartsheet Product Expert.",
+    "link": "",
+    "icon": "/images/icon/smartsheet.svg"
+  },
+  {
+    "name": "Cynergy Wattmon",
+   
+    "description": "Cynergy provide Internet of Things (IoT) Solution for Power Monitoring targeted at enterprise and SME customers. The solution includes a special-purpose IoT data logger hardware deployed at the power backup point (inverter or UPS) connected to the batteries. 3GIS is a strategic partner to Cynergy for this solution.",
+    "link": "",
+    "icon": "/images/icon/cynergy.png"
+  },
+  {
+    "name": "Project Management Institute",
+   
+    "description": "The project Management Institute (PMI) is the world’s largest project manager community, connecting people with thought leaders and trend-setters around the globe. PMI is the global authority in project management, promoting agile and waterfall frameworks and committed to advancing the project management profession. 3GIS is a certified Project Management Professional with the PMI and a long standing member of the institute.",
+    "link": "",
+    "icon": "/images/icon/curso-gratis.jpeg"
+  },
+  {
+    "name": "Atarapay",
+   
+    "description": "AtaraPay is a web and mobile tool used by seller and buyer for protection during any online or offline commercial transaction through funds held in escrow by a trusted third-party. This service provides 100% fraud-free transaction on online transactions. 3GIS is a strategic partner, providing AtaraPay escrow payment integrations on WordPress websites.",
+    "link": "",
+    "icon": "/images/icon/atarapay.png"
+  }
+]

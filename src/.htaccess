@@ -1,0 +1,20 @@
+# .htaccess file
+
+# Enable URL rewriting
+RewriteEngine On
+
+# Redirect HTTP to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Serve existing static files directly
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Next.js app rewrites
+RewriteRule ^ index.html [L]
+
+# Custom error documents
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
